@@ -1,0 +1,132 @@
+{
+    "name": "MyOrg_MyLib_SelectAndSearch",
+    "label": "Select And Search",
+    "description": "Two-pane search layout with configurable search criteria pane and results pane. Supports resizable vertical split and collapsible horizontal stacking.",
+    "organization": "MyOrg",
+    "version": "0.0.1",
+    "library": "MyLib",
+    "allowedApplications": [],
+    "componentKey": "MyOrg_MyLib_SelectAndSearch",
+    "type": "Template",
+    "subtype": "PAGE",
+    "properties": [
+        {
+            "name": "searchPaneTitle",
+            "label": "Search Pane Title",
+            "description": "Header text shown above the search criteria fields.",
+            "format": "TEXT",
+            "defaultValue": "Search Criteria"
+        },
+        {
+            "name": "resultsPaneTitle",
+            "label": "Results Pane Title",
+            "description": "Header text shown above the results view.",
+            "format": "TEXT",
+            "defaultValue": "Search Results"
+        },
+        {
+            "name": "searchButtonLabel",
+            "label": "Search Button Label",
+            "description": "Label for the search / submit button.",
+            "format": "TEXT",
+            "defaultValue": "Search"
+        },
+        {
+            "name": "resetButtonLabel",
+            "label": "Reset Button Label",
+            "description": "Label for the reset / clear button.",
+            "format": "TEXT",
+            "defaultValue": "Reset"
+        },
+        {
+            "name": "layoutDirection",
+            "label": "Layout Direction",
+            "description": "Vertical: side-by-side split (resizable). Horizontal: stacked top-to-bottom (collapsible).",
+            "format": "SELECT",
+            "defaultValue": "vertical",
+            "source": [
+                {
+                    "key": "vertical",
+                    "value": "Vertical (side-by-side)"
+                },
+                {
+                    "key": "horizontal",
+                    "value": "Horizontal (stacked)"
+                }
+            ]
+        },
+        {
+            "name": "searchColumns",
+            "label": "Search Pane Columns",
+            "description": "Number of columns for the search criteria fields.",
+            "format": "SELECT",
+            "defaultValue": "3",
+            "source": [
+                {
+                    "key": "1",
+                    "value": "1 Column"
+                },
+                {
+                    "key": "2",
+                    "value": "2 Columns"
+                },
+                {
+                    "key": "3",
+                    "value": "3 Columns"
+                }
+            ]
+        },
+        {
+            "name": "resultsPlaceholder",
+            "label": "Results Placeholder Text",
+            "description": "Text shown in the results pane before the user clicks Search.",
+            "format": "TEXT",
+            "defaultValue": "Enter search criteria and click Search."
+        },
+        {
+            "name": "searchFieldPane",
+            "label": "Search Field Pane",
+            "description": "Drop fields, views, and widgets that make up the search criteria form.",
+            "format": "CONTENTPICKER",
+            "addTypeList": [
+                "Fields",
+                "UIComponents",
+                "UIConstants",
+                "Views",
+                "Widgets",
+                "UIElements"
+            ]
+        },
+        {
+            "name": "resultsPane",
+            "label": "Results Pane",
+            "description": "Drop a view that renders the search results.",
+            "format": "CONTENTPICKER",
+            "addTypeList": [
+                "Views"
+            ]
+        },
+        {
+            "format": "LABEL",
+            "label": "About",
+            "name": "PegaAboutLabel",
+            "variant": "h3"
+        },
+        {
+            "format": "LABEL",
+            "label": "MyOrg_MyLib 0.0.1, Fri Mar 13 2026, 25.1.2-397",
+            "name": "PegaAboutData",
+            "variant": "primary"
+        }
+    ],
+    "defaultConfig": {
+        "searchPaneTitle": "Search Criteria",
+        "resultsPaneTitle": "Search Results",
+        "searchButtonLabel": "Search",
+        "resetButtonLabel": "Reset"
+    },
+    "icon": "SearchLayout.svg",
+    "buildDate": "2026-03-12T22:42:43.308Z",
+    "infinityVersion": "25.1.2-397",
+    "packageCosmosVersion": "8.15.2"
+}
